@@ -4,27 +4,27 @@ import Header from "../components/header"
 import Footer from "../components/footer"
 import SEO from "../components/seo"
 import Img from "gatsby-image"
-import './index.css'
 
-const IndexPage = ({ data }) => (
+const ServicesPage = ({ data }) => (
   <>
-    <SEO title="Home" />
-    <Header color="#fff"/>
-    <main id="home">
+    <SEO title="Services" />
+    <Header />
+    <main id="services">
       <div className="hero">
         <div className="hero__img-container">
           <Img
             className="hero__img-container__image"
-            fluid={data.home.childImageSharp.fluid}
+            fluid={data.services.childImageSharp.fluid}
           />
         </div>
         <div className="hero__text-container">
           <h1 className="hero__text-container__title">
-            Stand out from the digital crownd with TechRose!
+            Learn what we offer at Techrose!
           </h1>
           <h2 className="hero__text-container__text">
-            In need of a trendy, fast and personalised website
-            or a mobile application at an affordable price?
+            We have already helped both big and small business.
+            Would you like to join the list of our satisfied clients?
+            See what we can help you with at TechRose!
           </h2>
           <a className="hero__text-container__cta cta" href="#">
             Discover our Portfolio
@@ -33,7 +33,7 @@ const IndexPage = ({ data }) => (
       </div>
       <div className="ad">
         <h2 className="ad__sentence">
-          We will Help your Business Flourish!
+          Our services
         </h2>
       </div>
       <div className="case-section">
@@ -41,16 +41,16 @@ const IndexPage = ({ data }) => (
           <div className="case-section__img">
             <Img
               className="case-section__img__image"
-              fluid={data.profit.childImageSharp.fluid}
+              fluid={data.website.childImageSharp.fluid}
             />
           </div>
           <div className="case-section__text-container">
             <h3 className="case-section__text-container__title">
-              Increasing your Profit
+              Websites
             </h3>
             <p className="case-section__text-container__text">
-              We will advertise your products  and services to increase your profit.
-              We don't only produce websites or applications, we add real value to your business.
+              We will create a personalised website which will put you at
+              an advantage on the market due to its modern design and great speed.
             </p>
           </div>
         </div>
@@ -58,16 +58,16 @@ const IndexPage = ({ data }) => (
           <div className="case-section__img">
             <Img
               className="case-section__img__image"
-              fluid={data.appealing.childImageSharp.fluid}
+              fluid={data.application.childImageSharp.fluid}
             />
           </div>
           <div className="case-section__text-container">
             <h3 className="case-section__text-container__title">
-              Making your Business Appealing
+              Applications
             </h3>
             <p className="case-section__text-container__text">
-              We will produce  a modern and elegant design for your website or application.
-              This will highlight the appeal of products and services that your company offers.
+              We will develop a web application that will allow you to register,
+              order and analyse your data in a simple, and effective way.
             </p>
           </div>
         </div>
@@ -75,16 +75,33 @@ const IndexPage = ({ data }) => (
           <div className="case-section__img">
             <Img
               className="case-section__img__image"
-              fluid={data.business.childImageSharp.fluid}
+              fluid={data.ecommerce.childImageSharp.fluid}
             />
           </div>
           <div className="case-section__text-container">
             <h3 className="case-section__text-container__title">
-              Keeping your Customers Interested
+              E-commerce
             </h3>
             <p className="case-section__text-container__text">
-              You won't lose any impatient customer.
-              We use the latest technologies to provide fast websites and applications.
+              We will create a fast and trendy online shop that
+              will let you sell your products and services to a much higher number of customers.
+            </p>
+          </div>
+        </div>
+        <div className="case-section__item case-section__fourth">
+          <div className="case-section__img">
+            <Img
+              className="case-section__img__image"
+              fluid={data.computer.childImageSharp.fluid}
+            />
+          </div>
+          <div className="case-section__text-container">
+            <h3 className="case-section__text-container__title">
+              Posters and Banners
+            </h3>
+            <p className="case-section__text-container__text">
+              We will design a creative and appealing poster or a banner
+              that will advertise your products, services or special occassions.
             </p>
           </div>
         </div>
@@ -99,32 +116,39 @@ const IndexPage = ({ data }) => (
   </>
 )
 
-export default IndexPage
+export default ServicesPage
 
 export const query = graphql`
   {
-    home: file(relativePath: { eq: "home.jpg" }) {
+    services: file(relativePath: { eq: "services.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 2000, quality: 75) {
           ...GatsbyImageSharpFluid
         }
       }
     }
-    profit: file(relativePath: { eq: "profit.jpg" }) {
+    website: file(relativePath: { eq: "website.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 800, quality: 75) {
           ...GatsbyImageSharpFluid
         }
       }
     }
-    appealing: file(relativePath: { eq: "appealing.jpg" }) {
+    application: file(relativePath: { eq: "application.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 800, quality: 75) {
           ...GatsbyImageSharpFluid
         }
       }
     }
-    business: file(relativePath: { eq: "business.jpg" }) {
+    ecommerce: file(relativePath: { eq: "ecommerce.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 800, quality: 75) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    computer: file(relativePath: { eq: "computer.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 800, quality: 75) {
           ...GatsbyImageSharpFluid
