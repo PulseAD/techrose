@@ -1,0 +1,22 @@
+.portfolio-section {
+  margin: 4rem 1.25rem 0rem 1.25rem;
+}
+
+.portfolio-section h3 {
+  font-size: 1rem;
+  font-weight: 400;
+  text-align: center;
+  padding-top: 1rem;
+  padding-bottom: 3rem;
+}
+
+.portfolio-section img {
+  width: 100%;
+  text-align: center;
+  border-radius: 0.625rem;
+}
+
+.end-of-page__ad {
+  padding-bottom: 4.25rem;
+  font-weight: 500;
+}

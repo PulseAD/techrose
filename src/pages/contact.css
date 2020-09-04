@@ -8,6 +8,10 @@
   object-fit: cover;
 }
 
+#portfolio .special-hero__text-container__title {
+  color: #fff;
+}
+
 .special-hero__text-container__title {
   font-size: 1.375rem;
   font-weight: 700;
@@ -79,6 +83,7 @@
   border-radius: 0.675rem;
   border: none;
   margin-top: 1rem;
+  cursor: pointer;
 }
 
 .social {
