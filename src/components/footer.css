@@ -12,3 +12,10 @@ footer ul {
   padding: 0;
   cursor: pointer;
 }
+
+@media only screen and (min-width: 768px) {
+  footer ul li {
+    display: inline;
+    padding-right: 2rem;
+  }
+}

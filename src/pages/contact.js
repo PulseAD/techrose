@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "gatsby"
+import { graphql } from "gatsby"
 import Header from "../components/header"
 import Footer from "../components/footer"
 import SEO from "../components/seo"
@@ -13,7 +13,7 @@ import Dribbble from "../images/dribbble.svg"
 const ContactPage = ({ data }) => (
   <>
     <SEO title="Contact" />
-    <Header />
+    <Header className="header-black"/>
     <main id="contact">
       <div className="special-hero">
         <div className="special-hero__img-container">
@@ -33,30 +33,35 @@ const ContactPage = ({ data }) => (
           It is Time to Make your Wonderful Ideas Come True!
         </h3>
       </div>
-      <div className="information">
-        <p className="information__phone">555 666 333</p>
-        <p className="information__email">techrose.web@gmail.com</p>
-      </div>
-      <div className="form">
-        <form className="form__form">
-          <label className="form__form__label-name">
-            Name *
-            <input type="text" className="form__form__name" name="name" required/>
-          </label>
-          <label className="form__form__label-email">
-            Email *
-            <input type="email" className="form__form__name" name="email" required/>
-          </label>
-          <label className="form__form__label-message">
-            Message *
-            <textarea className="form__form__message" name="message" required></textarea>
-          </label>
-          <button className="form__form__button" type="submit">
-            Send
-          </button>
-        </form>
-      </div>
-      <div className="social">
+      <div className="outer">
+        <div className="container information">
+          <p className="information__phone">
+            <a href="tel:555666333">555 666 333</a>
+          </p>
+          <p className="information__email">
+            <a href="mailto:techrose.web@gmail.com">techrose.web@gmail.com</a>
+          </p>
+        </div>
+        <div className="container form">
+          <form className="form__form">
+            <label className="form__form__label-name" htmlFor="name">
+              Name *
+              <input type="text" className="form__form__name" name="name" id="name" required/>
+            </label>
+            <label className="form__form__label-email" htmlFor="email">
+              Email *
+              <input type="email" className="form__form__name" name="email" id="email" required/>
+            </label>
+            <label className="form__form__label-message" htmlFor="msg">
+              Message *
+              <textarea className="form__form__message" name="message" id="msg" required></textarea>
+            </label>
+            <button className="form__form__button" type="submit">
+              Send
+            </button>
+          </form>
+        </div>
+        <div className="container social">
         <div className="social__facebook">
           <img alt="facebook logo" src={Facebook} />
         </div>
@@ -70,6 +75,7 @@ const ContactPage = ({ data }) => (
           <img alt="dribbble logo" src={Dribbble} />
         </div>
       </div>
+      </div>
     </main>
     <Footer />
   </>
@@ -81,7 +87,7 @@ export const query = graphql`
   {
     contact: file(relativePath: { eq: "contact.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 2000, quality: 75) {
+        fluid(maxWidth: 1920, quality: 65) {
           ...GatsbyImageSharpFluid
         }
       }

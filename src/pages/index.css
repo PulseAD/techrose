@@ -29,7 +29,7 @@
   padding-bottom: 1.25rem;
   max-width: 15.625rem;
   margin: 0 auto;
-  line-height: 1.5rem;
+  line-height: 150%;
 }
 
 .hero__text-container__text {
@@ -97,4 +97,99 @@
   margin: 0 auto;
   margin-block-start: 0.675rem;
   margin-block-end: 3.125rem;
+}
+
+@media only screen and (min-width: 768px) {
+  main, footer {
+    margin: 0 auto;
+  }
+  .container {
+    max-width: 1170px;
+    margin: 3rem auto;
+  }
+  .outer {
+    margin: 0rem 1rem;
+  }
+  .hero {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    height: 100%;
+  }
+  .hero__img-container {
+    width: 50%;
+  }
+  .hero__img-container__image, .hero__img-container img{
+    height: 100% !important;
+  }
+  .hero__text-container {
+    text-align: left;
+    max-width: calc(50% - 4rem);
+    margin: 0rem 2rem auto;
+    padding: 0rem 1rem;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+  }
+  .hero__text-container__text, .hero__text-container__title {
+    margin: initial;
+    max-width: initial;
+  }
+  .hero__text-container__title {
+    font-size: 2.3rem;
+    line-height: 125%;
+    max-width: calc(540px + 1rem);
+    padding-bottom: 2rem;
+  }
+  .hero__text-container__text {
+    max-width: calc(540px + 1rem);
+    font-size: 0.9rem;
+    padding-bottom: 2.5rem;
+  }
+  .cta {
+    font-size: 0.88rem;
+  }
+  .ad {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+  }
+  .ad__sentence {
+    font-size: 1.7rem;
+    padding: 3.5rem 0rem;
+  }
+  .case-section__item {
+    display: flex;
+  }
+  .case-section__text-container {
+    width: 50%;
+    padding: 0rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .case-section__img {
+    width: 50%;
+    margin-bottom: 0rem;
+  }
+  .case-section__img img{
+    border-radius: 0px;
+  }
+  .case-section__first, .case-section__third {
+    flex-direction: row-reverse;
+  }
+  #services .case-section__second, #services .case-section__fourth {
+    flex-direction: row-reverse;
+  }
+  .case-section__first .case-section__text-container,
+  .case-section__third .case-section__text-container,
+  #services .case-section__second .case-section__text-container,
+  #services .case-section__fourth .case-section__text-container
+  {
+    padding-left: 0rem;
+    padding-right: 4rem;
+  }
+
+  .case-section__second .case-section__text-container {
+    padding-left: 4rem;
+    padding-right: 0rem;
+  }
 }

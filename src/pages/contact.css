@@ -31,6 +31,7 @@
   font-size: 1rem;
   font-weight: 700;
   padding: 0rem 1.25rem;
+  margin: 0 auto;
 }
 
 .information {
@@ -95,4 +96,31 @@
 .social img {
   height: 2rem;
   cursor: pointer;
+}
+
+@media only screen and (min-width: 768px) {
+  .special-hero__img-container .hero__img-container__image{
+    max-height: 100vh;
+  }
+  .special-hero__text-container__title {
+    font-size: 3rem;
+    top: 12rem;
+  }
+  #contact .ad__sentence {
+    font-size: 2rem;
+    max-width: 30rem;
+    padding: 0rem 2rem;
+  }
+  #contact .ad {
+    margin: 5rem 1.25rem;
+  }
+  .information {
+    padding: 2rem 0rem;
+  }
+  .information p {
+    font-size: 2rem;
+  }
+  .form__form {
+    margin: 3.75rem 0rem;
+  }
 }

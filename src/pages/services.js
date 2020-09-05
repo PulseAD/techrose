@@ -8,7 +8,7 @@ import Img from "gatsby-image"
 const ServicesPage = ({ data }) => (
   <>
     <SEO title="Services" />
-    <Header />
+    <Header className="header-black"/>
     <main id="services">
       <div className="hero">
         <div className="hero__img-container">
@@ -26,90 +26,92 @@ const ServicesPage = ({ data }) => (
             Would you like to join the list of our satisfied clients?
             See what we can help you with at TechRose!
           </h2>
-          <a className="hero__text-container__cta cta" href="#">
+          <Link className="hero__text-container__cta cta" to="/portfolio">
             Discover our Portfolio
-          </a>
+          </Link>
         </div>
       </div>
-      <div className="ad">
-        <h2 className="ad__sentence">
-          Our services
-        </h2>
-      </div>
-      <div className="case-section">
-        <div className="case-section__item case-section__first">
-          <div className="case-section__img">
-            <Img
-              className="case-section__img__image"
-              fluid={data.website.childImageSharp.fluid}
-            />
+      <div className="outer">
+        <div className="container ad">
+          <h2 className="ad__sentence">
+            Our services
+          </h2>
+        </div>
+        <div className="container case-section">
+          <div className="case-section__item case-section__first">
+            <div className="case-section__img">
+              <Img
+                className="case-section__img__image"
+                fluid={data.website.childImageSharp.fluid}
+              />
+            </div>
+            <div className="case-section__text-container">
+              <h3 className="case-section__text-container__title">
+                Websites
+              </h3>
+              <p className="case-section__text-container__text">
+                We will create a personalised website which will put you at
+                an advantage on the market due to its modern design and great speed.
+              </p>
+            </div>
           </div>
-          <div className="case-section__text-container">
-            <h3 className="case-section__text-container__title">
-              Websites
-            </h3>
-            <p className="case-section__text-container__text">
-              We will create a personalised website which will put you at
-              an advantage on the market due to its modern design and great speed.
-            </p>
+          <div className="case-section__item case-section__second">
+            <div className="case-section__img">
+              <Img
+                className="case-section__img__image"
+                fluid={data.application.childImageSharp.fluid}
+              />
+            </div>
+            <div className="case-section__text-container">
+              <h3 className="case-section__text-container__title">
+                Applications
+              </h3>
+              <p className="case-section__text-container__text">
+                We will develop a web application that will allow you to register,
+                order and analyse your data in a simple, and effective way.
+              </p>
+            </div>
+          </div>
+          <div className="case-section__item case-section__third">
+            <div className="case-section__img">
+              <Img
+                className="case-section__img__image"
+                fluid={data.ecommerce.childImageSharp.fluid}
+              />
+            </div>
+            <div className="case-section__text-container">
+              <h3 className="case-section__text-container__title">
+                E-commerce
+              </h3>
+              <p className="case-section__text-container__text">
+                We will create a fast and trendy online shop that
+                will let you sell your products and services to a much higher number of customers.
+              </p>
+            </div>
+          </div>
+          <div className="case-section__item case-section__fourth">
+            <div className="case-section__img">
+              <Img
+                className="case-section__img__image"
+                fluid={data.computer.childImageSharp.fluid}
+              />
+            </div>
+            <div className="case-section__text-container">
+              <h3 className="case-section__text-container__title">
+                Posters and Banners
+              </h3>
+              <p className="case-section__text-container__text">
+                We will design a creative and appealing poster or a banner
+                that will advertise your products, services or special occassions.
+              </p>
+            </div>
           </div>
         </div>
-        <div className="case-section__item case-section__second">
-          <div className="case-section__img">
-            <Img
-              className="case-section__img__image"
-              fluid={data.application.childImageSharp.fluid}
-            />
-          </div>
-          <div className="case-section__text-container">
-            <h3 className="case-section__text-container__title">
-              Applications
-            </h3>
-            <p className="case-section__text-container__text">
-              We will develop a web application that will allow you to register,
-              order and analyse your data in a simple, and effective way.
-            </p>
-          </div>
-        </div>
-        <div className="case-section__item case-section__third">
-          <div className="case-section__img">
-            <Img
-              className="case-section__img__image"
-              fluid={data.ecommerce.childImageSharp.fluid}
-            />
-          </div>
-          <div className="case-section__text-container">
-            <h3 className="case-section__text-container__title">
-              E-commerce
-            </h3>
-            <p className="case-section__text-container__text">
-              We will create a fast and trendy online shop that
-              will let you sell your products and services to a much higher number of customers.
-            </p>
-          </div>
-        </div>
-        <div className="case-section__item case-section__fourth">
-          <div className="case-section__img">
-            <Img
-              className="case-section__img__image"
-              fluid={data.computer.childImageSharp.fluid}
-            />
-          </div>
-          <div className="case-section__text-container">
-            <h3 className="case-section__text-container__title">
-              Posters and Banners
-            </h3>
-            <p className="case-section__text-container__text">
-              We will design a creative and appealing poster or a banner
-              that will advertise your products, services or special occassions.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div className="end-of-page">
-        <a className="end-of-page__cta cta" href="#">
+        <div className="container end-of-page">
+        <Link className="hero__text-container__cta cta" to="/portfolio">
           Discover our Portfolio
-        </a>
+        </Link>
+      </div>
       </div>
     </main>
     <Footer />
@@ -122,7 +124,7 @@ export const query = graphql`
   {
     services: file(relativePath: { eq: "services.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 2000, quality: 75) {
+        fluid(maxHeight: 900, quality: 75) {
           ...GatsbyImageSharpFluid
         }
       }
