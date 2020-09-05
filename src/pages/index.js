@@ -107,29 +107,29 @@ export const query = graphql`
   {
     home: file(relativePath: { eq: "home.jpg" }) {
       childImageSharp {
-        fluid(maxHeight: 900, quality: 75) {
-          ...GatsbyImageSharpFluid
+        fluid(maxHeight: 900, quality: 65) {
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
     profit: file(relativePath: { eq: "profit.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 800, quality: 75) {
-          ...GatsbyImageSharpFluid
+        fluid(maxWidth: 650, quality: 65) {
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
     appealing: file(relativePath: { eq: "appealing.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 800, quality: 75) {
-          ...GatsbyImageSharpFluid
+        fluid(maxWidth: 650, quality: 65) {
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
     business: file(relativePath: { eq: "business.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 800, quality: 75) {
-          ...GatsbyImageSharpFluid
+        fluid(maxWidth: 650, quality: 65) {
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
