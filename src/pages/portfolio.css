@@ -4,7 +4,7 @@
 
 .portfolio-section h3 {
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: 300;
   text-align: center;
   padding-top: 1rem;
   padding-bottom: 3rem;
@@ -18,7 +18,7 @@
 
 .end-of-page__ad {
   padding-bottom: 4.25rem;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 @media only screen and (min-width: 768px) {
