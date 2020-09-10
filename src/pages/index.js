@@ -107,28 +107,28 @@ export const query = graphql`
   {
     home: file(relativePath: { eq: "home.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 1200, quality: 75) {
+        fluid(maxWidth: 1000) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
     profit: file(relativePath: { eq: "profit.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 650, quality: 65) {
+        fluid(maxWidth: 600) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
     appealing: file(relativePath: { eq: "appealing.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 650, quality: 65) {
+        fluid(maxWidth: 600) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
     business: file(relativePath: { eq: "business.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 650, quality: 65) {
+        fluid(maxWidth: 600) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
