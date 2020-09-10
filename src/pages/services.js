@@ -125,35 +125,35 @@ export const query = graphql`
     services: file(relativePath: { eq: "services.jpg" }) {
       childImageSharp {
         fluid(maxHeight: 900, quality: 65) {
-          ...GatsbyImageSharpFluid
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
     website: file(relativePath: { eq: "website.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 650, quality: 65) {
-          ...GatsbyImageSharpFluid
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
     application: file(relativePath: { eq: "application.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 650, quality: 65) {
-          ...GatsbyImageSharpFluid
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
     ecommerce: file(relativePath: { eq: "ecommerce.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 650, quality: 65) {
-          ...GatsbyImageSharpFluid
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
     computer: file(relativePath: { eq: "computer.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 650, quality: 65) {
-          ...GatsbyImageSharpFluid
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
