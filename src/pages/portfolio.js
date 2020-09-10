@@ -96,28 +96,28 @@ export const query = graphql`
     portfolio: file(relativePath: { eq: "portfolio.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 1920, quality: 65) {
-          ...GatsbyImageSharpFluid_withWebp
+          ...GatsbyImageSharpFluid
         }
       }
     }
     clothes: file(relativePath: { eq: "clothes.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 1170, quality: 75) {
-          ...GatsbyImageSharpFluid_withWebp
+          ...GatsbyImageSharpFluid
         }
       }
     }
     shop: file(relativePath: { eq: "shop.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 1170, quality: 75) {
-          ...GatsbyImageSharpFluid_withWebp
+          ...GatsbyImageSharpFluid
         }
       }
     }
     coding: file(relativePath: { eq: "coding.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 1170, quality: 75) {
-          ...GatsbyImageSharpFluid_withWebp
+          ...GatsbyImageSharpFluid
         }
       }
     }
